@@ -1,0 +1,59 @@
+$code-block-border-style: 1px solid $border-color;
+$code-block-border-radius: 4px;
+
+// better dark mode table
+.text-table, table {
+  background-color: transparent !important;
+  border-collapse: collapse;
+  width: 100%;
+
+  th, td {
+    // Subtle dark border matching your syntax highlighting preference
+    border: $code-block-border-style !important;
+    padding: 1rem !important; // Generous padding from the light aesthetic
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  th {
+    font-weight: 700 !important;
+    text-align: left;
+    // Slight contrast for the header row
+    background-color: rgba(255, 255, 255, 0.02) !important;
+  }
+
+  // Inline code tags strictly inside the table (like 'oreos', 'zoute')
+  code {
+    // Subtle background to lift it off the dark table background
+    background-color: #252525 !important;
+    border: $code-block-border-style !important;
+    border-radius: $code-block-border-radius;
+    padding: 0.15rem 0.3rem;
+    font-size: 0.85em;
+    color: inherit !important;
+  }
+}
+
+// fenced code block style parity with inline code blocks
+div.highlighter-rouge div.highlight {
+  border: $code-block-border-style;
+  border-radius: $code-block-border-radius;
+}
+
+.highlight, pre.highlight {
+  line-height: 1.2; // Compresses the line spacing
+}
+
+// differentiate color of active nav item
+.nav-list .nav-list-item>.nav-list .nav-list-item .nav-list-link.active {
+  color: $link-color;
+}
+
+// graying out blockquote text
+blockquote {
+  color: $nav-child-link-color;
+}
+
+// highlighter highlight
+.highlighted {
+  background-color: #826613;
+}
