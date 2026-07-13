@@ -1,8 +1,9 @@
 # jekyll config
 title: "just-obsidian-docs"
-description: "Template repository for Jekyll and just-the-docs for Obsidian vaults"
-baseurl: "/just-obsidian-docs" # Reposistory name here if you're using Github Pages without custom URL
-url: "https://ngivanyh.github.io" # If using default Github URL
+description: "Template repository for Jekyll and Just the Docs for Obsidian vaults"
+# do not leave blank if your URL is https://domain_name.xyz/something
+baseurl: "/just-obsidian-docs" # put /something here
+url: "https://ngivanyh.github.io"
 
 # just-the-docs config
 remote_theme: just-the-docs/just-the-docs
@@ -11,6 +12,8 @@ aux_links:
   "just-obsidian-docs On Github":
     - "https://github.com/ngivanyh/just-obsidian-docs/"
 aux_links_new_tab: true
+
+# source: "vault_name/"
 
 # file exclusions
 exclude:
@@ -21,3 +24,7 @@ exclude:
   - .trash/
   - .github/
   - "*.py"
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - node_modules/
