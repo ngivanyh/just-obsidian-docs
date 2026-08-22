@@ -1,32 +1,34 @@
 <script>
   window.MathJax = {
     tex: {
-      inlineMath: [['$', '$']], // kramdown doesn't recognize this as inline math
-      displayMath: [['\n\\[', '\\]\n']], // kramdown converts \n$$LaTeX$$\n as that (raw text node)
+      // kramdown doesn't recognize this as inline math
+      inlineMath: [['$', '$']],
+      // kramdown converts \n$$LaTeX$$/$$LaTeX$$ as that (raw text node)
+      displayMath: [['\n\\[', '\\]\n'], ['\\[', '\\]']],
       processEscapes: true
     }
   };
 </script>
 <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const main = document.querySelector('#main-content');
-  if (!main) return;
+ document.addEventListener('DOMContentLoaded', function () {
+   const main = document.querySelector('#main-content');
+   if (!main) return;
 
-  const targets = main.querySelectorAll('p, a, h1, h2, h3, h4, h5, h6, td, th, li, blockquote');
-  const skipSelector = 'pre, kbd, samp, script, style, textarea, mjx-container, .MathJax, .katex, code';
+   const targets = main.querySelectorAll('p, a, h1, h2, h3, h4, h5, h6, td, th, li, blockquote');
+   const skipSelector = 'pre, kbd, samp, script, style, textarea, mjx-container, .MathJax, .katex, code';
 
-  targets.forEach((el) => {
-    if (el.closest(skipSelector)) return;
+   targets.forEach((el) => {
+     if (el.closest(skipSelector)) return;
 
-    let html = el.innerHTML;
-    if (!html.includes('==')) return;
+     let html = el.innerHTML;
+     if (!html.includes('==')) return;
 
-    const markerCount = (html.match(/==/g) || []).length;
-    if (markerCount % 2)
-      html = html.replace('==', '');
+     const markerCount = (html.match(/==/g) || []).length;
+     if (markerCount % 2)
+       return; // odd-numbered =='s
 
-    el.innerHTML = html.replace(/==(?<hl_text>.*?)==/g, '<span class="highlighted">$<hl_text></span>');
-  });
-});
+     el.innerHTML = html.replace(/==(?<hl_text>.*?)==/g, '<span class="highlighted">$<hl_text></span>');
+   });
+ });
 </script>
