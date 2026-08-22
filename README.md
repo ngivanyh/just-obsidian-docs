@@ -10,9 +10,8 @@ This template repository is mainly for those who want to have their Obsidian vau
 
 Mind you, all of this is not perfect, there are much more things to be added and improved. Some include the list below:
 
-- Sticky Headers
 - Full Wikilink Support (only some patterns are converted right now)
-- Support for GFM note, warning, tip, important, and caution blockquotes
+- Support for GFM note, warning, tip, important, and caution callouts
 - And a whole lot more
 
 I'm also not an Obsidian expert or Just the Docs expert, I definitely haven't tried everything it has to offer. But anyhow, hope this helps! I will be syncing the improvements I've made hosting [`cs-notes`](https://ngivanyh.github.com/cs-notes) over here periodically.

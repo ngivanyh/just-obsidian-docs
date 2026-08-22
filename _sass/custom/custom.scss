@@ -21,9 +21,7 @@ $code-block-border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.02) !important;
   }
 
-  // Inline code tags strictly inside the table (like 'oreos', 'zoute')
   code {
-    // Subtle background to lift it off the dark table background
     background-color: #252525 !important;
     border: $code-block-border-style !important;
     border-radius: $code-block-border-radius;
