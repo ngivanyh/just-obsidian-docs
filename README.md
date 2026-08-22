@@ -1,6 +1,11 @@
+---
+title: README
+---
+
 # just-obsidian-docs
 
-The vast majority of people who've stumbled upon this repository or plan on using it should check out [Quartz](https://quartz.jzhao.xyz/), it's arguably more suitable for the job and you should be quite happy with how it looks by default as well.
+> [!TIP] 
+> The vast majority of people who've stumbled upon this repository or plan on using it should check out [Quartz](https://quartz.jzhao.xyz/), it's arguably more suitable for the job and you should be quite happy with how it looks by default as well.
 
 Originally, when I was browsing for ways to turn my Obsidian vault into a webpage, I wanted to use Github Pages and Github Actions since I had already synced by vault onto Github. Therefore I started looking into Jekyll and used the Just the Docs theme since I thought it looked nice originally. In the midst of setting up things, and looking at the result, I realized just how many things were not showing up properly on the webpage. So it became my mission to fill in some of the gaps as best as I can, and now I've decided to make it a template repository for everyone to use.
 
