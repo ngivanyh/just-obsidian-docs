@@ -28,5 +28,3 @@ For more details, check out [Jekyll](https://jekyllrb.com/docs/) and [Just the D
 The `_config.yaml` as it currently stands expects your Obsidian vault to be in the root directory of the project, which means your files and `.obsidian/` will live alongside `_config.yaml`, `_sass/`, `_includes`, and any other directory used for the compilation of the webpage.
 
 If you don't want to mix such files with your vault, change the `source` key to point to some other directory.
-
-Setting `baseURL` may be required, espeically when you're using the default Github Pages URL, which is <https://github_username.github.io/repo_name>, so remember to set `baseURL` to `/repo_name`.

@@ -2,8 +2,8 @@
 title: "just-obsidian-docs"
 description: "Template repository for Jekyll and Just the Docs for Obsidian vaults"
 # do not leave blank if your URL is https://domain_name.xyz/something
-baseurl: "/just-obsidian-docs" # put /something here
-url: "https://ngivanyh.github.io"
+# baseurl: "/just-obsidian-docs" # put /something here
+url: "https://just-obsidian-docs.ivann.net"
 
 # just-the-docs config
 remote_theme: just-the-docs/just-the-docs
